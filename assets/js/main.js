@@ -58,7 +58,7 @@ function submitForm(event) {
     document.getElementById('submit-button').disabled = false;
     document.getElementById('submit-button').innerHTML = 'Submit';
     document.getElementById('success-popup').style.display = 'flex';
-  }, 1000);
+  }, 2000);
 }
 
 function closePopup() {
