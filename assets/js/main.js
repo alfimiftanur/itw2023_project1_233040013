@@ -43,6 +43,46 @@ function scrollActive(){
     })
 }
 
+// LOADING AFTER SEND 
+function submitForm(event) {
+  event.preventDefault();
+
+  // Disable true mencegah untuk mengirim berkali-kali
+  document.getElementById('submit-button').disabled = true;
+
+  // Change the content of the submit button to include the loading animation
+  document.getElementById('submit-button').innerHTML = '<div id="loading-spinner"></div>Loading...';
+
+  setTimeout(function() {
+    // Re-enable the submit button
+    document.getElementById('submit-button').disabled = false;
+    document.getElementById('submit-button').innerHTML = 'Submit';
+    document.getElementById('success-popup').style.display = 'flex';
+  }, 1000);
+}
+
+function closePopup() {
+  document.getElementById('success-popup').style.display = 'none';
+}
+
+// INPUT TO SPREASHEET
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwGZQbakhFaFWa8BknThsfCxQ000xNxoZL_a-mjGrFwYJ648PGSYmZuNATctZV-SEazMQ/exec'
+  const form = document.forms['contact-form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        form.reset();
+        console.log('Success!', response)
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
+
+
+
+
 // ===== TILT JS =====
 var VanillaTilt = (function () {
     'use strict';

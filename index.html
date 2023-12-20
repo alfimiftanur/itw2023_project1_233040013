@@ -83,12 +83,12 @@
 
                 <div class="about-container bd-grid">
 
-                    <div class="about-data" data-aos="fade-right" data-aos-delay="600">
+                    <div class="about-data" data-aos="fade-up" data-aos-delay="600">
                         <img src="assets/img/profile_ori.jpg" alt="" class="about-img" data-tilt data-tilt-scale="1.5" data-tilt-axis="x">
                     </div>
                     
                     <div>
-                        <div class="about-information" data-aos="fade-left" data-aos-delay="900">
+                        <div class="about-information" data-aos="fade-up" data-aos-delay="900">
                             <h3 class="about-information-title">Information</h3>
                             <p class="about-description">Hi! Welcome to my portfolio. I'm 
                                 Alfi Mifta Nurhakim. I'm from Tasikmalaya Regency, West Java.
@@ -175,25 +175,25 @@
                 </div>
 
                 <div class="skills-container bd-grid" >
-                    <div data-tilt data-tilt-scale="1.1">
-                        <div class="skills-content" data-aos="fade-right" data-aos-delay="500">
-                            <i class="bx bxl-html5 skills-icon html" data-tilt data-tilt-scale="1.5"></i>
+                    <div data-tilt data-tilt-scale="1.1" data-tilt-axis="x">
+                        <div class="skills-content" data-aos="flip-right" data-aos-delay="800" data-aos-duration="1000">
+                            <i class="bx bxl-html5 skills-icon html" ></i>
                             <h3 class="skills-title">HTML</h3>
                             <p class="skills-description">HTML (Hypertext Markup Language) adalah singkatan dari bahasa pemrograman yang digunakan untuk membuat dan merancang halaman web.</p>
                         </div>
                     </div>
 
                     <div data-tilt data-tilt-scale="1.1">
-                        <div class="skills-content" data-aos="fade-up" data-aos-delay="700">
-                            <i class="bx bxl-css3 skills-icon css" data-tilt data-tilt-scale="1.5"></i>
+                        <div class="skills-content" data-aos="flip-right" data-aos-delay="800" data-aos-duration="1000">
+                            <i class="bx bxl-css3 skills-icon css" ></i>
                             <h3 class="skills-title">CSS</h3>
                             <p class="skills-description">CSS (Cascading Style Sheets) adalah bahasa pemrograman yang digunakan untuk mengendalikan tampilan dan tata letak elemen-elemen HTML dalam suatu halaman.</p>
                         </div>
                     </div>
                     
-                    <div data-tilt data-tilt-scale="1.1">
-                        <div class="skills-content" data-aos="fade-left" data-aos-delay="900">
-                            <i class="bx bxl-javascript skills-icon js" data-tilt data-tilt-scale="1.5"></i>
+                    <div data-tilt data-tilt-scale="1.1" data-tilt-axis="x">
+                        <div class="skills-content" data-aos="flip-right" data-aos-delay="800" data-aos-duration="1000">
+                            <i class="bx bxl-javascript skills-icon js" ></i>
                             <h3 class="skills-title">Java Script</h3>
                             <p class="skills-description">JavaScript adalah bahasa pemrograman tingkat tinggi yang umumnya digunakan untuk membuat halaman web menjadi interaktif dan dinamis.</p>
                         </div>
@@ -211,33 +211,37 @@
                 </div>
 
                 <div class="contact-container bd-grid">
-                    <form action="" class="contact-form" data-aos="fade-right" data-aos-delay="500">
+                    <form action="" class="contact-form" name="contact-form" onsubmit="submitForm(event)" data-aos="fade-up" data-aos-delay="500">
                         <div class="contact-inputs">
-                            <input type="text" placeholder="Name" class="contact-input">
-                            <input type="email" placeholder="Email" class="contact-input">
+                            <input type="text" placeholder="Name" name="Name"class="contact-input">
+                            <input type="email" placeholder="Email" name="Email"class="contact-input">
                         </div>
-                        <textarea name="" id="" cols="0" rows="10" placeholder="Message" class="contact-input"></textarea>
-
-                        <input type="submit" value="Send Message" class="button contact-button" data-tilt data-tilt-scale="1.2">
+                        <textarea name="Message" id="" cols="0" rows="10" placeholder="Message" class="contact-input"></textarea>
+                        <button type="submit" class="btn" id="submit-button"> Send!</button>
                     </form>
 
-                    <div data-aos="fade-left" data-aos-delay="700">
+                    <div data-aos="fade-up" data-aos-delay="700">
                         <div class="contact-info" >
                             <h3 class="contact-subtitle">Call Me</h3>
                             <span class="contact-text"><i class='bx bxs-phone-call about-information-icon'></i>+62 82342675786</span>
-                            <!-- <span class="contact-text">082342675786</span> -->
                         </div>
 
                         <div class="contact-info">
                             <h3 class="contact-subtitle">E-mail</h3>
                             <span class="contact-text"><i class='bx bxs-envelope about-information-icon' ></i>alfinurhakim1234@gmail.com</span>
-                            <!-- <span class="contact-text">contactme@gmail.com</span> -->
                         </div>
                         
                         <div class="contact-info">
                             <h3 class="contact-subtitle">Location</h3>
                             <span class="contact-text"><i class='bx bxs-map-pin about-information-icon' ></i>Tasikmalaya, Jawa Barat</span>
-                            <!-- <span class="contact-text">Jawa Barat</span> -->
+                        </div>
+                    </div>
+                    <!-- Successful Popup -->
+                    <div class="popup" id="success-popup">
+                        <div class="popup-content">
+                            <h2>Success!</h2>
+                            <p>Your message has been sent. Thanks!</p>
+                            <button onclick="closePopup()">Close</button>
                         </div>
                     </div>
                 </div>
