@@ -189,6 +189,10 @@ img{
   cursor: pointer;
 }
 
+.nav-close .bx.bx-x{
+  color: var(--first-color-light);
+}
+
 /*=== Show menu ===*/
 .show{
   left: 0;
